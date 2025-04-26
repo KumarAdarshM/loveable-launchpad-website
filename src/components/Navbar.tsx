@@ -2,12 +2,10 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import logo from '../assets/logo.svg';
-import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +20,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
-
   return (
     <header
       className={cn(
@@ -34,45 +28,22 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <Link to="/" className="flex items-center">
+        <a href="/" className="flex items-center">
           <img src={logo} alt="Loveable Dev" className="h-8" />
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex items-center space-x-8">
             <li>
-              <Link 
-                to="/" 
-                className={cn(
-                  "text-agency-blue hover:text-agency-purple transition-colors",
-                  isActive('/') && 'text-agency-purple font-medium'
-                )}
-              >
-                Home
-              </Link>
+              <a href="#services" className="text-agency-blue hover:text-agency-purple transition-colors">
+                Services
+              </a>
             </li>
             <li>
-              <Link 
-                to="/about" 
-                className={cn(
-                  "text-agency-blue hover:text-agency-purple transition-colors",
-                  isActive('/about') && 'text-agency-purple font-medium'
-                )}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/projects" 
-                className={cn(
-                  "text-agency-blue hover:text-agency-purple transition-colors",
-                  isActive('/projects') && 'text-agency-purple font-medium'
-                )}
-              >
-                Projects
-              </Link>
+              <a href="#portfolio" className="text-agency-blue hover:text-agency-purple transition-colors">
+                Portfolio
+              </a>
             </li>
             <li>
               <a href="#contact" className="btn btn-primary">
@@ -112,9 +83,9 @@ const Navbar = () => {
         >
           <div className="flex flex-col h-full p-4">
             <div className="flex justify-between items-center mb-8">
-              <Link to="/" className="flex items-center">
+              <a href="/" className="flex items-center">
                 <img src={logo} alt="Loveable Dev" className="h-8" />
-              </Link>
+              </a>
               <button 
                 className="text-agency-blue p-2" 
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -134,40 +105,22 @@ const Navbar = () => {
             <nav className="flex-grow">
               <ul className="flex flex-col space-y-6 text-lg">
                 <li>
-                  <Link
-                    to="/"
-                    className={cn(
-                      "text-agency-blue hover:text-agency-purple transition-colors",
-                      isActive('/') && 'text-agency-purple font-medium'
-                    )}
+                  <a 
+                    href="#services" 
+                    className="text-agency-blue hover:text-agency-purple transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Home
-                  </Link>
+                    Services
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/about"
-                    className={cn(
-                      "text-agency-blue hover:text-agency-purple transition-colors",
-                      isActive('/about') && 'text-agency-purple font-medium'
-                    )}
+                  <a 
+                    href="#portfolio" 
+                    className="text-agency-blue hover:text-agency-purple transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/projects"
-                    className={cn(
-                      "text-agency-blue hover:text-agency-purple transition-colors",
-                      isActive('/projects') && 'text-agency-purple font-medium'
-                    )}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Projects
-                  </Link>
+                    Portfolio
+                  </a>
                 </li>
                 <li>
                   <a 
