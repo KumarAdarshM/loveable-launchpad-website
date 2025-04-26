@@ -32,53 +32,21 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>TechCraft Studio | Modern Web Development Agency</title>
-        <meta 
-          name="description" 
-          content="TechCraft Studio - Your partner for modern web development, e-commerce solutions, and digital transformation. We craft beautiful, high-performance websites and applications." 
-        />
-        <meta 
-          name="keywords" 
-          content="web development, react development, e-commerce, web applications, digital transformation, TechCraft Studio" 
-        />
-        <meta property="og:title" content="TechCraft Studio | Modern Web Development Agency" />
-        <meta 
-          property="og:description" 
-          content="Your partner for modern web development and digital transformation." 
-        />
+        <title>Loveable Dev | Web Development Agency</title>
+        <meta name="description" content="Professional web development services tailored to your business needs. We build modern, responsive websites and web applications." />
+        <meta name="keywords" content="web development, website design, custom websites, e-commerce development, API integration" />
+        <meta property="og:title" content="Loveable Dev | Web Development Agency" />
+        <meta property="og:description" content="Professional web development services tailored to your business needs." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://techcraft.studio/" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="TechCraft Studio" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://techcraft.studio/" />
+        <meta property="og:url" content="https://loveable.dev/" />
       </Helmet>
       
-      <div className="animate-slide-down">
-        <Navbar />
-      </div>
-      
-      <main className="overflow-hidden">
-        <section className="animate-slide-up">
-          <Hero />
-        </section>
-        
-        <section className="animate-slide-up delay-100">
-          <Services />
-        </section>
-        
-        <section className="animate-slide-up delay-200">
-          <Portfolio />
-        </section>
-        
-        <section className="animate-slide-up delay-300">
-          <Contact />
-        </section>
-      </main>
-      
-      <div className="animate-slide-up delay-400">
-        <Footer />
-      </div>
+      <Navbar />
+      <Hero />
+      <Services />
+      <Portfolio />
+      <Contact />
+      <Footer />
     </>
   );
 };
