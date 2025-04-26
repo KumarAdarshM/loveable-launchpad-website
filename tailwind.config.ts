@@ -1,28 +1,24 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
-	darkMode: ["class"],
-	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
-	],
-	prefix: "",
-	theme: {
-		container: {
-			center: true,
-			padding: '2rem',
-			screens: {
-				'2xl': '1400px'
-			}
-		},
-		extend: {
-			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-			},
-			colors: {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -72,14 +68,33 @@ export default {
 					lightPurple: '#A78BFA',
 					gray: '#F8FAFC',
 					darkGray: '#334155',
-				}
-			},
-			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
-			},
-			keyframes: {
+				},
+        
+        // New modern color palette
+        primary: {
+          DEFAULT: "#6366f1", // Indigo
+          light: "#818cf8",
+          dark: "#4f46e5",
+        },
+        secondary: {
+          DEFAULT: "#14b8a6", // Teal
+          light: "#2dd4bf",
+          dark: "#0d9488",
+        },
+        accent: {
+          DEFAULT: "#f43f5e", // Rose
+          light: "#fb7185",
+          dark: "#e11d48",
+        },
+        agency: {
+          blue: "#1e40af",
+          purple: "#6366f1",
+          lightPurple: "#818cf8",
+          gray: "#f1f5f9",
+          darkGray: "#334155",
+        }
+      },
+      keyframes: {
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -113,15 +128,36 @@ export default {
 						transform: 'translateY(0)',
 						opacity: '1'
 					}
-				}
-			},
-			animation: {
+				},
+        
+        "slide-up": {
+          "0%": { transform: "translateY(100px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" }
+        },
+        "slide-down": {
+          "0%": { transform: "translateY(-100px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" }
+        },
+        "slide-in-right": {
+          "0%": { transform: "translateX(100px)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" }
+        },
+        "scale-up": {
+          "0%": { transform: "scale(0.8)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" }
+        }
+      },
+      animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out forwards',
-				'slide-up': 'slide-up 0.5s ease-out forwards'
-			}
-		}
-	},
-	plugins: [require("tailwindcss-animate")],
+				'slide-up': 'slide-up 0.5s ease-out forwards',
+        "slide-up": "slide-up 0.6s ease-out",
+        "slide-down": "slide-down 0.6s ease-out",
+        "slide-in-right": "slide-in-right 0.6s ease-out",
+        "scale-up": "scale-up 0.6s ease-out"
+      }
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
