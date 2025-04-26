@@ -52,9 +52,14 @@ const Services = () => {
   return (
     <section id="services" className="bg-white py-24">
       <div className="container">
-        <div className="section-heading opacity-0 animate-fade-in">
-          <h2 className="text-agency-blue">Our Services</h2>
-          <p>Comprehensive web development solutions to take your business to the next level</p>
+        <div 
+          className="text-center space-y-4 opacity-0 animate-fade-in"
+          style={{ animationDelay: '0.2s' }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-agency-blue">Our Services</h2>
+          <p className="text-lg text-agency-darkGray">
+            Comprehensive web development solutions to take your business to the next level
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
@@ -62,16 +67,15 @@ const Services = () => {
             <div 
               key={service.id}
               className={cn(
-                "card p-8 flex flex-col items-start",
-                "transition-all duration-300 hover:translate-y-[-8px]",
+                "bg-white p-8 rounded-lg shadow-lg",
+                "transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl",
                 "opacity-0"
               )}
               style={{ 
-                animationName: 'fade-in, slide-up', 
-                animationDuration: '0.5s, 0.5s',
-                animationDelay: `${index * 0.1 + 0.2}s`, 
-                animationFillMode: 'forwards',
-                animationTimingFunction: 'ease-out' 
+                animationName: 'fade-in, slide-up',
+                animationDuration: '0.5s',
+                animationDelay: `${index * 0.1 + 0.4}s`,
+                animationFillMode: 'forwards'
               }}
             >
               <div className="text-agency-purple mb-4">

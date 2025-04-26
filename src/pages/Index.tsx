@@ -47,12 +47,14 @@ const Index = () => {
         <meta property="og:url" content="https://techcraft.studio/" />
       </Helmet>
       
-      <Navbar />
-      <Hero />
-      <Services />
-      <Portfolio />
-      <Contact />
-      <Footer />
+      <div className="animate-fade-in">
+        <Navbar />
+        <Hero />
+        <Services />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 };

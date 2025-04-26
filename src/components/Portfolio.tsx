@@ -35,24 +35,26 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-24 bg-agency-gray">
       <div className="container">
-        <div className="section-heading">
-          <h2 className="text-agency-blue">Our Portfolio</h2>
-          <p>Explore some of our recent work and successful projects</p>
+        <div 
+          className="text-center space-y-4 opacity-0 animate-fade-in"
+          style={{ animationDelay: '0.2s' }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-agency-blue">Our Portfolio</h2>
+          <p className="text-lg text-agency-darkGray">
+            Explore some of our recent work and successful projects
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className={cn(
-                "group relative overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300",
-                "hover:shadow-xl opacity-0"
-              )}
+              className="group relative overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:shadow-xl opacity-0"
               style={{ 
-                animationName: 'fade-in', 
-                animationDuration: '0.5s', 
-                animationDelay: `${index * 0.15 + 0.2}s`, 
-                animationFillMode: 'forwards' 
+                animationName: 'fade-in',
+                animationDuration: '0.5s',
+                animationDelay: `${index * 0.15 + 0.4}s`,
+                animationFillMode: 'forwards'
               }}
               onMouseEnter={() => setActiveProject(project.id)}
               onMouseLeave={() => setActiveProject(null)}
@@ -90,7 +92,10 @@ const Portfolio = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div 
+          className="text-center mt-12 opacity-0 animate-fade-in"
+          style={{ animationDelay: '0.8s' }}
+        >
           <a href="#contact" className="btn btn-primary">
             Start Your Project
           </a>
