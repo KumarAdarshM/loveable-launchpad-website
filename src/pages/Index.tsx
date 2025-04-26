@@ -32,13 +32,19 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Loveable Dev | Web Development Agency</title>
-        <meta name="description" content="Professional web development services tailored to your business needs. We build modern, responsive websites and web applications." />
-        <meta name="keywords" content="web development, website design, custom websites, e-commerce development, API integration" />
-        <meta property="og:title" content="Loveable Dev | Web Development Agency" />
-        <meta property="og:description" content="Professional web development services tailored to your business needs." />
+        <title>TechCraft Studio | Modern Web Development Solutions</title>
+        <meta 
+          name="description" 
+          content="TechCraft Studio delivers cutting-edge web development solutions. Expert team crafting beautiful, responsive websites and powerful web applications."
+        />
+        <meta 
+          name="keywords" 
+          content="web development, custom websites, react development, web applications, responsive design, modern web solutions"
+        />
+        <meta property="og:title" content="TechCraft Studio | Modern Web Development Solutions" />
+        <meta property="og:description" content="Expert team crafting beautiful, responsive websites and powerful web applications." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://loveable.dev/" />
+        <meta property="og:url" content="https://techcraft.studio/" />
       </Helmet>
       
       <Navbar />

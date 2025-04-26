@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 
 const Hero = () => {
@@ -6,19 +5,25 @@ const Hero = () => {
     <section className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-white to-agency-gray">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 animate-fade-in">
+          <div className="space-y-6 opacity-0 animate-fade-in">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-agency-blue">
-              We Build <span className="text-agency-purple">Beautiful</span> Digital Experiences
+              Crafting Digital <span className="text-agency-purple">Excellence</span>
             </h1>
             <p className="text-lg md:text-xl text-agency-darkGray max-w-lg">
-              Professional web development services tailored to your business needs. 
-              Transform your ideas into powerful, responsive websites.
+              We transform your vision into powerful digital experiences. Our expert team
+              builds modern, scalable web solutions that drive results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="btn btn-primary">
-                Get a Quote
+              <a 
+                href="#contact" 
+                className="btn btn-primary transition-transform hover:scale-105"
+              >
+                Start Your Project
               </a>
-              <a href="#portfolio" className="btn btn-secondary">
+              <a 
+                href="#portfolio" 
+                className="btn btn-secondary transition-transform hover:scale-105"
+              >
                 View Our Work
               </a>
             </div>
